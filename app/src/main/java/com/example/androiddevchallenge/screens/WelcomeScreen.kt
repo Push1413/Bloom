@@ -2,8 +2,8 @@ package com.example.androiddevchallenge.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
+import androidx.compose.material.*
+import androidx.compose.material.ButtonDefaults.buttonColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -13,6 +13,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.androiddevchallenge.ui.theme.Pink900
+import com.example.androiddevchallenge.ui.theme.White
 
 @Composable
 fun WelcomeScreen() {
@@ -34,11 +36,96 @@ private fun WelcomeScreenContent() {
         modifier = Modifier.fillMaxWidth()
     ) {
 
-        Spacer(modifier =Modifier.height(72.dp))
+        Spacer(modifier = Modifier.height(72.dp))
 
         LeafImage()
+
+        Spacer(Modifier.height(48.dp))
+
+        LogoImage()
+
+        AppSubtitle()
+
+        Spacer(Modifier.height(40.dp))
+
+        CreateAccountButton()
+
+        Spacer(Modifier.height(8.dp))
+
+        LoginButton()
+
+
     }
 
+}
+
+@Composable
+fun LoginButton() {
+    val isLight = MaterialTheme.colors.isLight
+
+    val textColor = if (isLight) {
+        Pink900
+    } else {
+        White
+    }
+
+    TextButton(
+        onClick = {},
+        shape = MaterialTheme.shapes.medium,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(48.dp)
+            .padding(horizontal = 16.dp),
+    ) {
+        Text(
+            text = "Log in",
+            color = textColor,
+        )
+    }
+}
+
+@Composable
+fun CreateAccountButton() {
+    Button(
+        colors = buttonColors(
+            backgroundColor = MaterialTheme.colors.secondary
+        ),
+        shape = MaterialTheme.shapes.medium,
+        onClick = {},
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(48.dp)
+            .padding(horizontal = 16.dp)
+    ) {
+        Text(text = "Create account")
+    }
+
+}
+
+@Composable
+fun AppSubtitle() {
+    Text(
+        text = "Beautiful home garden solutions",
+        style = MaterialTheme.typography.subtitle1,
+        modifier = Modifier
+            .paddingFromBaseline(32.dp)
+    )
+}
+
+@Composable
+fun LogoImage() {
+    val isLight = MaterialTheme.colors.isLight
+
+    val logoImageRes = if (isLight) {
+        R.drawable.ic_light_logo
+    } else {
+        R.drawable.ic_dark_logo
+    }
+
+    Image(
+        painter = painterResource(id = logoImageRes),
+        contentDescription = "Bloom",
+    )
 }
 
 @Composable
