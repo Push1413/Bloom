@@ -7,6 +7,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
@@ -14,12 +15,14 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.MyApp
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.utils.BloomSecondaryButton
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavController) {
     Surface(
         color = MaterialTheme.colors.background,
         modifier = Modifier
@@ -43,14 +46,18 @@ fun LoginScreen() {
 
             Spacer(Modifier.height(16.dp))
 
-            LoginButton()
+            LoginButton(navController)
         }
     }
 }
 
 @Composable
-private fun LoginButton() {
-    BloomSecondaryButton(buttonText = "Log in")
+private fun LoginButton(navController: NavController) {
+    BloomSecondaryButton(
+        buttonText = "Log in",
+        nav = navController,
+        destination = "home"
+    )
 }
 
 @Composable
@@ -88,7 +95,8 @@ private fun PasswordInput() {
 
 @Composable
 private fun EmailInput() {
-    val emailState = remember {
+    // [rememberSaveable] for config change handling
+    val emailState = rememberSaveable {
         mutableStateOf("")
     }
     OutlinedTextField(
@@ -122,6 +130,6 @@ private fun LogInHeader() {
 @Composable
 private fun LoginScreenPreview() {
     MyTheme(darkTheme = false) {
-        LoginScreen()
+        LoginScreen(rememberNavController())
     }
 }

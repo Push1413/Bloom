@@ -10,17 +10,23 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.navigate
 
 @Composable
 fun BloomSecondaryButton(
-    buttonText: String
-){
+    buttonText: String,
+    nav: NavController,
+    destination: String
+) {
     Button(
         colors = ButtonDefaults.buttonColors(
             backgroundColor = MaterialTheme.colors.secondary,
         ),
         shape = MaterialTheme.shapes.medium,
-        onClick = {},
+        onClick = {
+            nav.navigate(destination)
+        },
         modifier = Modifier
             .fillMaxWidth()
             .height(48.dp)

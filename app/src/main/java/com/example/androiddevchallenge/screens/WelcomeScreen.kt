@@ -11,6 +11,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.navigate
+import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.ui.theme.Pink900
@@ -18,7 +21,7 @@ import com.example.androiddevchallenge.ui.theme.White
 import com.example.androiddevchallenge.utils.BloomSecondaryButton
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(navController: NavController) {
     Surface(
         color = MaterialTheme.colors.primary,
         modifier = Modifier
@@ -26,12 +29,12 @@ fun WelcomeScreen() {
     ) {
         WelcomeBackground()
 
-        WelcomeScreenContent()
+        WelcomeScreenContent(navController)
     }
 }
 
 @Composable
-private fun WelcomeScreenContent() {
+private fun WelcomeScreenContent(navController: NavController) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxWidth()
@@ -49,11 +52,11 @@ private fun WelcomeScreenContent() {
 
         Spacer(Modifier.height(40.dp))
 
-        CreateAccountButton()
+        CreateAccountButton(navController)
 
         Spacer(Modifier.height(8.dp))
 
-        LoginButton()
+        LoginButton(navController)
 
 
     }
@@ -61,7 +64,7 @@ private fun WelcomeScreenContent() {
 }
 
 @Composable
- private fun LoginButton() {
+ private fun LoginButton(navController: NavController) {
     val isLight = MaterialTheme.colors.isLight
 
     val textColor = if (isLight) {
@@ -71,7 +74,9 @@ private fun WelcomeScreenContent() {
     }
 
     TextButton(
-        onClick = {},
+        onClick = {
+                  navController.navigate("login")
+        },
         shape = MaterialTheme.shapes.medium,
         modifier = Modifier
             .fillMaxWidth()
@@ -86,8 +91,10 @@ private fun WelcomeScreenContent() {
 }
 
 @Composable
-fun CreateAccountButton() {
-    BloomSecondaryButton(buttonText ="Create account")
+fun CreateAccountButton(navController: NavController) {
+    BloomSecondaryButton(buttonText ="Create account",
+    nav =navController,
+    destination = "login")
 }
 
 @Composable
@@ -156,6 +163,6 @@ private fun WelcomeBackground() {
 @Composable
 fun DarkPreview() {
     MyTheme(darkTheme = true) {
-        WelcomeScreen()
+        WelcomeScreen(rememberNavController())
     }
 }
