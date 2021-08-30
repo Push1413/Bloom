@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.data.PlantTheme
 import com.example.androiddevchallenge.data.defaultPlantThemes
 import com.example.androiddevchallenge.ui.theme.MyTheme
-import com.example.androiddevchallenge.ui.theme.shapes
 
 @Composable
 fun ItemPlantTheme(plantTheme: PlantTheme) {
