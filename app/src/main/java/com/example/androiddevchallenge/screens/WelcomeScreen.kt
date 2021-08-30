@@ -15,6 +15,7 @@ import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.ui.theme.Pink900
 import com.example.androiddevchallenge.ui.theme.White
+import com.example.androiddevchallenge.utils.BloomSecondaryButton
 
 @Composable
 fun WelcomeScreen() {
@@ -60,7 +61,7 @@ private fun WelcomeScreenContent() {
 }
 
 @Composable
-fun LoginButton() {
+ private fun LoginButton() {
     val isLight = MaterialTheme.colors.isLight
 
     val textColor = if (isLight) {
@@ -86,20 +87,7 @@ fun LoginButton() {
 
 @Composable
 fun CreateAccountButton() {
-    Button(
-        colors = buttonColors(
-            backgroundColor = MaterialTheme.colors.secondary
-        ),
-        shape = MaterialTheme.shapes.medium,
-        onClick = {},
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(48.dp)
-            .padding(horizontal = 16.dp)
-    ) {
-        Text(text = "Create account")
-    }
-
+    BloomSecondaryButton(buttonText ="Create account")
 }
 
 @Composable
@@ -164,7 +152,7 @@ private fun WelcomeBackground() {
     )
 }
 
-@Preview("Dark Theme")
+@Preview()
 @Composable
 fun DarkPreview() {
     MyTheme(darkTheme = true) {
