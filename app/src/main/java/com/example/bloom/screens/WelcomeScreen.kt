@@ -1,9 +1,8 @@
-package com.example.androiddevchallenge.screens
+package com.example.bloom.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.material.ButtonDefaults.buttonColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -14,11 +13,11 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.ui.theme.MyTheme
-import com.example.androiddevchallenge.ui.theme.Pink900
-import com.example.androiddevchallenge.ui.theme.White
-import com.example.androiddevchallenge.utils.BloomSecondaryButton
+import com.example.bloom.R
+import com.example.bloom.ui.theme.MyTheme
+import com.example.bloom.ui.theme.Pink900
+import com.example.bloom.ui.theme.White
+import com.example.bloom.utils.BloomSecondaryButton
 
 @Composable
 fun WelcomeScreen(navController: NavController) {

@@ -1,20 +1,17 @@
-package com.example.androiddevchallenge
+package com.example.bloom
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.screens.HomeScreen
-import com.example.androiddevchallenge.screens.LoginScreen
-import com.example.androiddevchallenge.screens.WelcomeScreen
-import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.bloom.screens.HomeScreen
+import com.example.bloom.screens.LoginScreen
+import com.example.bloom.screens.WelcomeScreen
+import com.example.bloom.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

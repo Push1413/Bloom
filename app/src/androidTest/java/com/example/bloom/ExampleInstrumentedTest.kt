@@ -13,15 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.bloom
 
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
 
-val White = Color(0xFFFFFFFF)
-val White150 = White.copy(alpha = 0.15F)
-val White850 = White.copy(alpha = 0.85F)
-val Pink100 = Color(0xFFFFF1F1)
-val Pink900 = Color(0xFF3F2C2C)
-val Gray = Color(0xFF232323)
-val Green300 = Color(0xFFB8C9B8)
-val Green900 = Color(0xFF2D3B2D)
+/**
+ * Instrumented test, which will execute on an Android device.
+ *
+ * See [testing documentation](http://d.android.com/tools/testing).
+ */
+@RunWith(AndroidJUnit4::class)
+class ExampleInstrumentedTest {
+    @get:Rule
+    val composeTestRule = createAndroidComposeRule<MainActivity>()
+
+    @Test
+    fun sampleTest() {
+        // Add instrumented tests here
+    }
+}

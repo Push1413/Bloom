@@ -1,13 +1,11 @@
-package com.example.androiddevchallenge.screens
+package com.example.bloom.screens
 
-import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Filter
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
@@ -17,11 +15,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.data.defaultPlantThemes
-import com.example.androiddevchallenge.data.homeGardenItems
-import com.example.androiddevchallenge.recyclerview.ItemHomeGarden
-import com.example.androiddevchallenge.recyclerview.ItemPlantTheme
-import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.bloom.data.defaultPlantThemes
+import com.example.bloom.data.homeGardenItems
+import com.example.bloom.recyclerview.ItemHomeGarden
+import com.example.bloom.recyclerview.ItemPlantTheme
+import com.example.bloom.ui.theme.MyTheme
 
 @Composable
 fun HomeScreen(navController: NavController) {

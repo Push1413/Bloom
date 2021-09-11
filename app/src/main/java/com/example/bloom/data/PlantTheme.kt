@@ -1,6 +1,6 @@
-package com.example.androiddevchallenge.data
+package com.example.bloom.data
 
-import com.example.androiddevchallenge.R
+import com.example.bloom.R
 
 data class PlantTheme(
     val imgRes:Int,

@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.recyclerview
+package com.example.bloom.recyclerview
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -13,9 +13,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.data.PlantTheme
-import com.example.androiddevchallenge.data.homeGardenItems
-import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.bloom.data.PlantTheme
+import com.example.bloom.data.homeGardenItems
+import com.example.bloom.ui.theme.MyTheme
 
 @Composable
 fun ItemHomeGarden(plantTheme: PlantTheme) {
