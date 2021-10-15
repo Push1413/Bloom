@@ -1,4 +1,4 @@
-package com.example.bloom
+package com.example.bloom.presentation
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -8,10 +8,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.bloom.screens.HomeScreen
-import com.example.bloom.screens.LoginScreen
-import com.example.bloom.screens.WelcomeScreen
-import com.example.bloom.ui.theme.MyTheme
+import com.example.bloom.presentation.screens.HomeScreen
+import com.example.bloom.presentation.screens.LoginScreen
+import com.example.bloom.presentation.screens.WelcomeScreen
+import com.example.bloom.presentation.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

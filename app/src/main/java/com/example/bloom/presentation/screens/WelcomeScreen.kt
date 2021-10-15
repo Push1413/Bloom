@@ -1,4 +1,4 @@
-package com.example.bloom.screens
+package com.example.bloom.presentation.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -11,13 +11,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
 import com.example.bloom.R
-import com.example.bloom.ui.theme.MyTheme
-import com.example.bloom.ui.theme.Pink900
-import com.example.bloom.ui.theme.White
-import com.example.bloom.utils.BloomSecondaryButton
+import com.example.bloom.presentation.ui.theme.MyTheme
+import com.example.bloom.presentation.ui.theme.Pink900
+import com.example.bloom.presentation.ui.theme.White
+import com.example.bloom.common.utils.BloomSecondaryButton
 
 @Composable
 fun WelcomeScreen(navController: NavController) {

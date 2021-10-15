@@ -1,4 +1,4 @@
-package com.example.bloom.screens
+package com.example.bloom.presentation.screens
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
@@ -17,9 +17,9 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.bloom.data.defaultPlantThemes
 import com.example.bloom.data.homeGardenItems
-import com.example.bloom.recyclerview.ItemHomeGarden
-import com.example.bloom.recyclerview.ItemPlantTheme
-import com.example.bloom.ui.theme.MyTheme
+import com.example.bloom.presentation.recyclerview.ItemHomeGarden
+import com.example.bloom.presentation.recyclerview.ItemPlantTheme
+import com.example.bloom.presentation.ui.theme.MyTheme
 
 @Composable
 fun HomeScreen(navController: NavController) {

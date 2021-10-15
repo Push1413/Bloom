@@ -1,4 +1,4 @@
-package com.example.bloom.recyclerview
+package com.example.bloom.presentation.recyclerview
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.bloom.data.PlantTheme
 import com.example.bloom.data.defaultPlantThemes
-import com.example.bloom.ui.theme.MyTheme
+import com.example.bloom.presentation.ui.theme.MyTheme
 
 @Composable
 fun ItemPlantTheme(plantTheme: PlantTheme) {

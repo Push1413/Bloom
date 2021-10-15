@@ -1,4 +1,4 @@
-package com.example.bloom.screens
+package com.example.bloom.presentation.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
@@ -16,8 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.bloom.ui.theme.MyTheme
-import com.example.bloom.utils.BloomSecondaryButton
+import com.example.bloom.presentation.ui.theme.MyTheme
+import com.example.bloom.common.utils.BloomSecondaryButton
 
 @Composable
 fun LoginScreen(navController: NavController) {
@@ -97,6 +97,9 @@ private fun EmailInput() {
     val emailState = rememberSaveable {
         mutableStateOf("")
     }
+//    val emailState = remember {
+//        mutableStateOf("")
+//    }
     OutlinedTextField(
         value = emailState.value,
         keyboardOptions = KeyboardOptions.Default.copy(
