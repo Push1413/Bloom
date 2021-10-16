@@ -1,4 +1,4 @@
-package com.example.bloom.presentation.recyclerview
+package com.example.bloom.presentation.ui.recyclerview
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*

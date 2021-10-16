@@ -1,4 +1,4 @@
-package com.example.bloom.presentation.screens
+package com.example.bloom.presentation.ui.activities
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -13,10 +13,11 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.bloom.R
+import com.example.bloom.common.Constant.login_route
 import com.example.bloom.presentation.ui.theme.MyTheme
 import com.example.bloom.presentation.ui.theme.Pink900
 import com.example.bloom.presentation.ui.theme.White
-import com.example.bloom.common.utils.BloomSecondaryButton
+import com.example.bloom.presentation.utils.BloomSecondaryButton
 
 @Composable
 fun WelcomeScreen(navController: NavController) {
@@ -73,7 +74,7 @@ private fun WelcomeScreenContent(navController: NavController) {
 
     TextButton(
         onClick = {
-                  navController.navigate("login")
+                  navController.navigate(login_route)
         },
         shape = MaterialTheme.shapes.medium,
         modifier = Modifier
@@ -92,7 +93,7 @@ private fun WelcomeScreenContent(navController: NavController) {
 fun CreateAccountButton(navController: NavController) {
     BloomSecondaryButton(buttonText ="Create account",
     nav =navController,
-    destination = "login")
+    destination = login_route)
 }
 
 @Composable

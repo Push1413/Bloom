@@ -1,4 +1,4 @@
-package com.example.bloom.presentation.screens
+package com.example.bloom.presentation.ui.activities
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
@@ -16,8 +16,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.bloom.common.Constant.home_route
 import com.example.bloom.presentation.ui.theme.MyTheme
-import com.example.bloom.common.utils.BloomSecondaryButton
+import com.example.bloom.presentation.utils.BloomSecondaryButton
 
 @Composable
 fun LoginScreen(navController: NavController) {
@@ -54,7 +55,7 @@ private fun LoginButton(navController: NavController) {
     BloomSecondaryButton(
         buttonText = "Log in",
         nav = navController,
-        destination = "home"
+        destination = home_route
     )
 }
 

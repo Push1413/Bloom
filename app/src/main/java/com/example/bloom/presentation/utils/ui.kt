@@ -1,4 +1,4 @@
-package com.example.bloom.common.utils
+package com.example.bloom.presentation.utils
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height

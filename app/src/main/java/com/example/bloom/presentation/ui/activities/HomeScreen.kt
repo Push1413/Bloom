@@ -1,4 +1,4 @@
-package com.example.bloom.presentation.screens
+package com.example.bloom.presentation.ui.activities
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
@@ -17,8 +17,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.bloom.data.defaultPlantThemes
 import com.example.bloom.data.homeGardenItems
-import com.example.bloom.presentation.recyclerview.ItemHomeGarden
-import com.example.bloom.presentation.recyclerview.ItemPlantTheme
+import com.example.bloom.presentation.ui.recyclerview.ItemHomeGarden
+import com.example.bloom.presentation.ui.recyclerview.ItemPlantTheme
 import com.example.bloom.presentation.ui.theme.MyTheme
 
 @Composable

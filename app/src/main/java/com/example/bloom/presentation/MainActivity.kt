@@ -8,10 +8,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.bloom.presentation.screens.HomeScreen
-import com.example.bloom.presentation.screens.LoginScreen
-import com.example.bloom.presentation.screens.WelcomeScreen
+import com.example.bloom.presentation.ui.activities.HomeScreen
+import com.example.bloom.presentation.ui.activities.LoginScreen
+import com.example.bloom.presentation.ui.activities.WelcomeScreen
 import com.example.bloom.presentation.ui.theme.MyTheme
+import com.example.bloom.presentation.utils.SetUpNavGraph
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,17 +20,19 @@ class MainActivity : AppCompatActivity() {
         setContent {
             MyTheme {
                 val navController = rememberNavController()
-                NavHost(navController,"welcome"){
-                    composable("welcome") {
-                        WelcomeScreen(navController)
-                    }
-                    composable("login") {
-                        LoginScreen(navController)
-                    }
-                    composable("home"){
-                        HomeScreen(navController)
-                    }
-                }
+                SetUpNavGraph(navController)
+
+//                NavHost(navController,"welcome"){
+//                    composable("welcome") {
+//                        WelcomeScreen(navController)
+//                    }
+//                    composable("login") {
+//                        LoginScreen(navController)
+//                    }
+//                    composable("home"){
+//                        HomeScreen(navController)
+//                    }
+//                }
             }
         }
     }
