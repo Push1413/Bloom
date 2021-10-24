@@ -9,7 +9,9 @@ import androidx.navigation.compose.rememberNavController
 import com.example.bloom.presentation.ui.activities.WelcomeScreen
 import com.example.bloom.presentation.ui.theme.MyTheme
 import com.example.bloom.common.navigation.navgraphs.SetUpNavGraph
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,18 +19,6 @@ class MainActivity : AppCompatActivity() {
             MyTheme {
                 val navController = rememberNavController()
                 SetUpNavGraph(navController)
-
-//                NavHost(navController,"welcome"){
-//                    composable("welcome") {
-//                        WelcomeScreen(navController)
-//                    }
-//                    composable("login") {
-//                        LoginScreen(navController)
-//                    }
-//                    composable("home"){
-//                        HomeScreen(navController)
-//                    }
-//                }
             }
         }
     }

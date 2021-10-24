@@ -15,9 +15,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.bloom.data.defaultPlantThemes
-import com.example.bloom.data.homeGardenItems
 import com.example.bloom.common.navigation.BottomNavigationBar
+import com.example.bloom.data.local.defaultPlantThemes
+import com.example.bloom.data.local.homeGardenItems
 import com.example.bloom.presentation.ui.recyclerview.ItemHomeGarden
 import com.example.bloom.presentation.ui.recyclerview.ItemPlantTheme
 import com.example.bloom.presentation.ui.theme.MyTheme

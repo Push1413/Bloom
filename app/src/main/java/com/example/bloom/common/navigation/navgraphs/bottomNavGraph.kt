@@ -7,7 +7,7 @@ import androidx.navigation.navigation
 import com.example.bloom.common.Constant
 import com.example.bloom.common.navigation.Screens
 import com.example.bloom.presentation.ui.activities.CoinScreen
-import com.example.bloom.presentation.ui.activities.FoodScreen
+import com.example.bloom.presentation.ui.activities.food.FoodScreen
 import com.example.bloom.presentation.ui.activities.HomeScreen
 
 fun NavGraphBuilder.bottomNavGraph(

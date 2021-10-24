@@ -13,8 +13,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.bloom.data.PlantTheme
-import com.example.bloom.data.homeGardenItems
+import com.example.bloom.data.local.PlantTheme
+import com.example.bloom.data.local.homeGardenItems
 import com.example.bloom.presentation.ui.theme.MyTheme
 
 @Composable

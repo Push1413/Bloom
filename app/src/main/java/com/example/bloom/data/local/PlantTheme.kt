@@ -1,4 +1,4 @@
-package com.example.bloom.data
+package com.example.bloom.data.local
 
 import com.example.bloom.R
 
