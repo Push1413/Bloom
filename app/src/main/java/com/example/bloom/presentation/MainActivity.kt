@@ -5,14 +5,10 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.bloom.presentation.ui.activities.HomeScreen
-import com.example.bloom.presentation.ui.activities.LoginScreen
 import com.example.bloom.presentation.ui.activities.WelcomeScreen
 import com.example.bloom.presentation.ui.theme.MyTheme
-import com.example.bloom.presentation.utils.SetUpNavGraph
+import com.example.bloom.common.navigation.navgraphs.SetUpNavGraph
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

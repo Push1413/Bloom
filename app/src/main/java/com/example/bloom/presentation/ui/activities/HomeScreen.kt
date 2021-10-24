@@ -17,6 +17,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.bloom.data.defaultPlantThemes
 import com.example.bloom.data.homeGardenItems
+import com.example.bloom.common.navigation.BottomNavigationBar
 import com.example.bloom.presentation.ui.recyclerview.ItemHomeGarden
 import com.example.bloom.presentation.ui.recyclerview.ItemPlantTheme
 import com.example.bloom.presentation.ui.theme.MyTheme
@@ -24,27 +25,34 @@ import com.example.bloom.presentation.ui.theme.MyTheme
 @Composable
 fun HomeScreen(navController: NavController) {
 
-    Surface(
-        color = MaterialTheme.colors.background,
-        modifier = Modifier
-            .fillMaxSize()
-    ) {
-        Column(
+    Scaffold(
+        bottomBar = {
+            BottomNavigationBar(navController)
+        }
+    ){
+        Surface(
+            color = MaterialTheme.colors.background,
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-
         ) {
-            Spacer(modifier = Modifier.height(40.dp))
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
 
-            SearchInput()
+            ) {
+                Spacer(modifier = Modifier.height(40.dp))
 
-            BrowseThemeSection()
+                SearchInput()
 
-            HomeGardenSection()
+                BrowseThemeSection()
 
+                HomeGardenSection()
+
+            }
         }
     }
+
 
 }
 
