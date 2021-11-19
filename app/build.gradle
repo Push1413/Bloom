@@ -113,4 +113,8 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
 
+    //coil image lib
+    implementation "io.coil-kt:coil-compose:1.4.0"
+
+
 }

@@ -1,4 +1,4 @@
-package com.example.bloom.presentation.ui.activities
+package com.example.bloom.presentation.ui.activities.auth
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*

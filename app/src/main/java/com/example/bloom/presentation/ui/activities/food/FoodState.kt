@@ -4,6 +4,6 @@ import com.example.bloom.data.remote.dto.FoodRecipeDto
 
 data class FoodState(
     val isLoading: Boolean = false,
-    val coins: FoodRecipeDto = FoodRecipeDto(emptyList()),
+    val foodList: FoodRecipeDto = FoodRecipeDto(emptyList()),
     val error: String = ""
 )

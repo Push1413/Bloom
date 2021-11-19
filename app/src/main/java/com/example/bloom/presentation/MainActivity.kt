@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
-import com.example.bloom.presentation.ui.activities.WelcomeScreen
+import com.example.bloom.presentation.ui.activities.auth.WelcomeScreen
 import com.example.bloom.presentation.ui.theme.MyTheme
 import com.example.bloom.common.navigation.navgraphs.SetUpNavGraph
 import dagger.hilt.android.AndroidEntryPoint

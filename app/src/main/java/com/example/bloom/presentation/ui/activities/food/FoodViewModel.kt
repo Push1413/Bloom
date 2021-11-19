@@ -45,7 +45,7 @@ class FoodViewModel @Inject constructor(
         useCase.invoke(queries = queries).onEach { result ->
             when (result) {
                 is Resource.Success -> {
-                    _state.value = FoodState(coins = result.data ?: FoodRecipeDto(emptyList()))
+                    _state.value = FoodState(foodList = result.data ?: FoodRecipeDto(emptyList()))
                 }
                 is Resource.Error -> {
                     _state.value = FoodState(

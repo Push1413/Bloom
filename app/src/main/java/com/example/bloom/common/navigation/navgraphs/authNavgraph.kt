@@ -6,8 +6,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.example.bloom.common.Constant
 import com.example.bloom.common.navigation.Screens
-import com.example.bloom.presentation.ui.activities.LoginScreen
-import com.example.bloom.presentation.ui.activities.WelcomeScreen
+import com.example.bloom.presentation.ui.activities.auth.LoginScreen
+import com.example.bloom.presentation.ui.activities.auth.WelcomeScreen
 
 fun NavGraphBuilder.authNavGraph(
     navController: NavHostController

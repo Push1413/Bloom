@@ -1,4 +1,4 @@
-package com.example.bloom.presentation.ui.activities
+package com.example.bloom.presentation.ui.activities.auth
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
@@ -131,7 +131,7 @@ private fun LogInHeader() {
 @Preview()
 @Composable
 private fun LoginScreenPreview() {
-    MyTheme(darkTheme = false) {
+    MyTheme(darkTheme = true) {
         LoginScreen(rememberNavController())
     }
 }
