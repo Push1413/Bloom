@@ -20,11 +20,11 @@ fun ItemFood(recipe: ResultDto) {
         modifier = Modifier.fillMaxWidth(),
         elevation = 5.dp
     ) {
-        Column() {
+        Row() {
             Image(
                 painter = rememberImagePainter(recipe.image),
                 contentDescription = "Recipe Img",
-                modifier = Modifier.size(200.dp)
+                modifier = Modifier.size(136.dp)
             )
             Text(
                 text = recipe.title,
