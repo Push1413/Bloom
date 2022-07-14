@@ -7,6 +7,7 @@ plugins {
 
 android {
     compileSdkVersion 31
+    buildToolsVersion '30.0.3'
 
     defaultConfig {
         applicationId "com.example.Bloom"
@@ -30,9 +31,13 @@ android {
 
     buildTypes {
         debug {
+            buildConfigField('String', 'BASE_URL', baseUrl)
+            buildConfigField('String', 'API_KEY', apiKey)
             signingConfig signingConfigs.debug
         }
         release {
+            buildConfigField('String', 'BASE_URL', baseUrl)
+            buildConfigField('String', 'API_KEY', apiKey)
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -52,11 +57,11 @@ android {
         compose true
 
         // Disable unused AGP features
-        buildConfig false
-        aidl false
-        renderScript false
-        resValues false
-        shaders false
+//        buildConfig false
+//        aidl false
+//        renderScript false
+//        resValues false
+//        shaders false
     }
 
     composeOptions {
@@ -70,7 +75,13 @@ android {
 
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.4.0-beta01'
     implementation 'com.google.android.material:material:1.4.0'

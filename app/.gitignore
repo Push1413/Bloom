@@ -13,3 +13,6 @@ captures
 # General
 .DS_Store
 .externalNativeBuild
+
+# Gradle files
+.gradle/

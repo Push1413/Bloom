@@ -1,6 +1,5 @@
 package com.example.bloom.di
-
-import com.example.bloom.common.Constant.BASE_URL
+import com.example.bloom.BuildConfig
 import com.example.bloom.data.remote.FoodyAPI
 import com.example.bloom.data.repository.FoodRepoImpl
 import com.example.bloom.domain.repository.FoodRepository
@@ -20,7 +19,7 @@ object AppModule {
     @Singleton
     fun provideFoodyApi(): FoodyAPI {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(FoodyAPI::class.java)

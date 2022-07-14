@@ -4,7 +4,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.bloom.common.Constant.API_KEY
+import com.example.bloom.BuildConfig
 import com.example.bloom.common.Constant.DEFAULT_DIET_TYPE
 import com.example.bloom.common.Constant.DEFAULT_MEAL_TYPE
 import com.example.bloom.common.Constant.DEFAULT_RECIPES_NUMBER
@@ -33,7 +33,7 @@ class FoodViewModel @Inject constructor(
     init {
         val queries: HashMap<String, String> = HashMap()
         queries[QUERY_NUMBER] = DEFAULT_RECIPES_NUMBER
-        queries[QUERY_API_KEY] = API_KEY
+        queries[QUERY_API_KEY] = BuildConfig.API_KEY
         queries[QUERY_TYPE] = DEFAULT_MEAL_TYPE
         queries[QUERY_DIET] = DEFAULT_DIET_TYPE
         queries[QUERY_ADD_RECIPE_INFORMATION] = "true"

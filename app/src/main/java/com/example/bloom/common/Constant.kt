@@ -14,9 +14,6 @@ object Constant {
     const val wallet_route = "wallet"
 
 
-    const val BASE_URL = "https://api.spoonacular.com"
-    const val API_KEY = "26ea376510c940ed9b9efea8a06a2db4"
-
     // API Query Keys
     const val QUERY_NUMBER = "number"
     const val QUERY_API_KEY = "apiKey"
